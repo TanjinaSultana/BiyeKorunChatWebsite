@@ -1,0 +1,242 @@
+// sidebar
+    .sidebar {
+        background-color: $bg-color;
+        width: 420px;
+        height: 990px;
+        margin-top: $marginTop;
+        border-radius: 11px;
+    
+        .userProfile {
+            display: flex;
+    
+            .userImage img {
+                width: 50px;
+                height: 50px;
+                flex-shrink: 0;
+                border-radius: 100%;
+               
+                margin-top: $marginTop;
+                margin-left: 30px;
+                margin-right: 6px;
+            }
+    
+            div {
+                h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #2C323F;
+                    margin-top: $marginTop;
+                }
+    
+                .activeStatus {
+                    display: flex;
+                    gap: 5px;
+                    margin-top: -10px;
+    
+                    .Checker {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        color: #565B65;
+                        margin-top: -5px;
+    
+                    }
+    
+                }
+            }
+        }
+    
+        .searchFilter {
+            display: flex;
+            margin: 0 auto;
+            width: 390px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+    
+            .search {
+                width: 300px;
+                height: 40px;
+                border-radius: 8px;
+                border: 1px solid $borderColor;
+                display: flex;
+                justify-content: space-between;
+    
+                background-color: #F8F8F8;
+                margin: 16px 10px 0 10px;
+    
+                .searchContent {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    color: #00000080;
+    
+                    justify-content: start;
+                    margin: 12px 0 12px 10px;
+                }
+    
+                .searchIcon {
+                    justify-content: end;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                }
+            }
+    
+            .filter {
+                width: 86px;
+                height: 40px;
+                border-radius: 5px;
+                margin-top: 16px;
+                border: 1px solid none;
+                background: linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%);
+    
+                // bg-[#076A49] 
+                .filterContent {
+                    display: flex;
+                    gap: 8px;
+                    width: 70px;
+                    margin: 14px 0 14px auto;
+    
+                    .filterbtn {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        color: #FFFFFF;
+                        margin-top: -2px;
+    
+    
+                    }
+                }
+            }
+        }
+      
+    
+           .userlist {
+               display: flex;
+       
+               margin-top: 10px;
+               justify-content: space-evenly;
+               .userDetails {
+                   display: flex;
+                   justify-content: start;
+                   margin-left: -50px;
+                   margin-top: 8px;
+       
+                   .images img {
+                       width: 36px;
+                       height: 36px;
+                       border-radius: 100%;
+                       margin-right: 10px;
+                       margin-top: 10px;
+                      
+       
+       
+                   }
+       
+                   .userName {
+                       font-weight: 500;
+                       font-size: 18px;
+       
+                       .hexCode {
+       
+                           font-size: 14px;
+                           font-style: normal;
+                           font-weight: 400;
+                           line-height: normal;
+                           color: $text-color;
+                       }
+                   }
+       
+                   .userMember {
+                       font-weight: 400;
+                       font-size: 16px;
+                       color: #666666;
+       
+                   }
+       
+                   .userVideo {
+                       font-size: 14px;
+                       font-style: normal;
+                       font-weight: 600;
+                       line-height: normal;
+                       color: #000000;
+                   }
+       
+                   .userText {
+                       font-size: 14px;
+                       font-style: normal;
+                       font-weight: 400;
+                       line-height: normal;
+                       color: #000000B2;
+                   }
+               }
+       
+               .userTime {
+                   text-align: right;
+                   margin-top: -80px;
+                   margin-left: 200px;
+                   .time {
+                       text-align: right;
+       
+                       font-size: 14px;
+                       font-style: normal;
+                       font-weight: 400;
+                       line-height: normal;
+                       color: #6F747C;
+                   }
+       
+                   .msgSvg {
+                       text-align: right;
+       
+                       .message {
+                           margin-top: -20px;
+                           margin-right: 5px;
+                           color: white;
+       
+                           font-size: 12px;
+                           font-style: normal;
+                           font-weight: 400;
+                           line-height: normal;
+       
+                       }
+                   }
+               }
+               .background{
+                width: 330px;
+                height: 65px;
+                flex-shrink: 0;
+                border-radius: 5px;
+                border: 1px solid #0000001A;
+                background: #FFF;
+                padding-left: 30px;
+                padding-right: 30px;
+                margin-top: 20px;
+                
+                .userdetail{
+                    margin-top: -8px;
+                    padding: 3px;
+    
+                    .image img{
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 100%;
+                        margin-right: 10px;
+                        margin-top: 10px;
+                        margin-left: 20px;
+                    }
+                }
+              
+               
+            
+                
+               }
+       
+       
+           }
+       
+    
+    }
+   
+
