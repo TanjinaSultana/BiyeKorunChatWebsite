@@ -72,12 +72,12 @@
                     line-height: 16px;
                     color: #00000080;
     
-                    justify-content: start;
+                    justify-content: flex-start;
                     margin: 12px 0 12px 10px;
                 }
     
                 .searchIcon {
-                    justify-content: end;
+                    justify-content: flex-end;
                     margin-top: 10px;
                     margin-right: 10px;
                 }
@@ -120,7 +120,7 @@
                justify-content: space-evenly;
                .userDetails {
                    display: flex;
-                   justify-content: start;
+                   justify-content: flex-start;
                    margin-left: -50px;
                    margin-top: 8px;
        

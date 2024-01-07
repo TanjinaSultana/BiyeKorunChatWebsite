@@ -2,3 +2,10 @@
 const nextConfig = {}
 
 module.exports = nextConfig
+// next.config.js
+module.exports = {
+    images: {
+      domains: ['i.ibb.co', 'example.com', 'another-domain.com'],
+    },
+  };
+  

@@ -1,38 +1,49 @@
-img {
+.msgHeader {
+  display: flex;
+}
+.msgHeader img {
   width: 36px;
   height: 36px;
   border-radius: 100%;
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 85px;
 }
-
-.heading {
+.msgHeader .heading {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-top: 15px;
 }
-
-.msgBox .msg {
-  color: var(--Gray, #666);
+.msgHeader .msgBox {
+  margin-left: 15px;
+}
+.msgHeader .msgBox .msg {
+  color: #666;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: -60px;
 }
-.msgBox .msg .msg span {
-  background: var(--Gradient2, linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%));
+.msgHeader .msgBox .msg .msgspan {
+  background: linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.msgBox .inbox {
+.msgHeader .msgBox .inbox {
   display: flex;
+  margin-top: -25px;
+  color: var(--Gray, #666);
+  gap: 15px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=message.css.map */

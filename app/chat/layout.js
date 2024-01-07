@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
-import './style/main.scss'
-
+import '../style/main.scss'
+import Sidebar from './Components/Sidebar/Sidebar'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,11 +14,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <div id='chat'>
+       <div id='chat'>
 
-    <Sidebar></Sidebar>
-  </div> */}
-  {children}
+<Sidebar></Sidebar>
+    
+        {children}
+       </div>
+      
         </body>
     </html>
   )

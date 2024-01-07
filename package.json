@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-warning",
     "start": "next start",
     "lint": "next lint"
   },
+  
   "dependencies": {
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "13.5",
+
+    "react": "18.2.0",
+   
+    "react-dom": "18.2.0",
     "sas": "^3.0.4",
     "sass": "^1.69.7"
   }

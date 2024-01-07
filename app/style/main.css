@@ -62,11 +62,11 @@
   font-weight: 400;
   line-height: 16px;
   color: rgba(0, 0, 0, 0.5019607843);
-  justify-content: start;
+  justify-content: flex-start;
   margin: 12px 0 12px 10px;
 }
 #chat .sidebar .searchFilter .search .searchIcon {
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 10px;
   margin-right: 10px;
 }
@@ -99,7 +99,7 @@
 }
 #chat .sidebar .userlist .userDetails {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-left: -50px;
   margin-top: 8px;
 }
@@ -280,43 +280,104 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  background-image: linear-gradient(84deg, #CB176B 5.79%, #0A2E22 94.42%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   color: linear-gradient(84deg, #CB176B 5.79%, #0A2E22 94.42%);
 }
-#chat .chatbox img {
+#chat .chatbox .msgHeader {
+  display: flex;
+}
+#chat .chatbox .msgHeader .img {
   width: 36px;
   height: 36px;
   border-radius: 100%;
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 85px;
+  margin-left: 20px;
 }
-#chat .chatbox .heading {
+#chat .chatbox .msgHeader .heading {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-top: 15px;
 }
-#chat .chatbox .msgBox .msg {
-  color: var(--Gray, #666);
+#chat .chatbox .msgHeader .svgBox {
+  margin-top: -5px;
+}
+#chat .chatbox .msgHeader .msgBox {
+  margin-left: 15px;
+}
+#chat .chatbox .msgHeader .msgBox .msg {
+  color: #666;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: -60px;
 }
-#chat .chatbox .msgBox .msg .msg span {
-  background: var(--Gradient2, linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%));
+#chat .chatbox .msgHeader .msgBox .msg .msgspan {
+  background: linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-#chat .chatbox .msgBox .inbox {
+#chat .chatbox .msgHeader .msgBox .inbox {
   display: flex;
+  margin-top: -25px;
+  color: var(--Gray, #666);
+  gap: 15px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#chat .chatbox .msgHeader .msgBox .inbox .msgTime {
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+}
+#chat .chatbox .msgHeader div .message3 {
+  margin-top: -45px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #666666;
+  margin-left: 15px;
+}
+#chat .chatbox .msgHeader div .time {
+  margin-left: 275px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -15px;
+  color: #666666;
+}
+#chat .chatbox .msgHeader .TimeButton {
+  margin-top: 20px;
+  margin-left: 230px;
+}
+#chat .chatbox .msgHeader .sender {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end; /* Align the container to the right */
+  width: 600px;
+}
+#chat .chatbox .msgHeader .sender svg {
+  margin-top: 15px;
+  /* This is not needed for svg */
 }
 #chat .chatbox .sendOption {
   display: flex;

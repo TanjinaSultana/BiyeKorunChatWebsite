@@ -3,97 +3,97 @@ import React from 'react';
 import UserProfile from '../UserProfile/UserProfile';
 import UserList from '../UserList/UserList';
 
+ export const chats = [
+    {
+        _id: 1,
+        image: "https://i.ibb.co/Yk2LzSZ/Mask-group.png",
+        img_bg: "#9908F5",
+        name: "Engineer’s Group",
+        member: "10K member",
+        time: "10:30 AM"
+    },
+    {
+        _id: 2,
+        image: "https://i.ibb.co/3NfY0ZZ/user2.png",
+        name: "FG",
+        HexCode: "#54326",
+        videoText: "SR sent a video",
+        time: "Yesterday",
+        message: "5"
+    },
+    {
+        _id: 3,
+        image: "https://i.ibb.co/Kwbfs1c/Mask-group-2.png",
+        img_bg: "#08F5CA",
+        name: "Doctor’s Group",
+        member: "1K member",
+        time: "Yesterday"
+    },
+    {
+        _id: 4,
+        image: "https://i.ibb.co/nzPW0zB/user4.png",
+        name: "AR",
+        HexCode: "#54326",
+        Text: "Hey, I am here...",
+        time: "12 Nov, 2023",
+        bg: "#FFFFFF"
+
+    },
+    {
+        _id: 5,
+        image: "https://i.ibb.co/3NfY0ZZ/user2.png",
+        name: "FG",
+        HexCode: "#54326",
+        videoText: "SR sent a video",
+        time: "2 Nov, 2023",
+        message: "5"
+    },
+    {
+        _id: 6,
+        image: "https://i.ibb.co/19FFC1Z/dollar-sign-1.png",
+        img_bg: "#00C12A",
+        name: "Millionaire’s Group",
+        member: "500 member",
+        time: "2 Nov, 2023"
+    },
+    {
+        _id: 7,
+        image: "https://i.ibb.co/cgf3sZ4/user8.png",
+        name: "AR",
+        HexCode: "#54326",
+        videoText: "AR sent a video",
+        time: "2 Nov, 2023",
+        message: "2"
+    },
+    {
+        _id: 8,
+        image: "https://i.ibb.co/427n1gB/user9.png",
+        name: "JK",
+        HexCode: "#54326",
+        Text: "Hey, I am here...",
+        time: "01 Nov, 2023",
+
+    },
+    {
+        _id: 9,
+        image: "https://i.ibb.co/427n1gB/user9.png",
+        name: "FG",
+        HexCode: "#54326",
+        videoText: "SR sent a video",
+        time: "01 Nov, 2023",
+        message: "5"
+    },
+    {
+        _id: 10,
+        image: "https://i.ibb.co/427n1gB/user9.png",
+        name: "PR",
+        HexCode: "#54326",
+        Text: "Hey, I am here...",
+        time: "4 Nov, 2023",
+
+    },
+]
 function Sidebar() {
-    const chats = [
-        {
-            _id: 1,
-            image: "https://i.ibb.co/Yk2LzSZ/Mask-group.png",
-            img_bg: "#9908F5",
-            name: "Engineer’s Group",
-            member: "10K member",
-            time: "10:30 AM"
-        },
-        {
-            _id: 2,
-            image: "https://i.ibb.co/3NfY0ZZ/user2.png",
-            name: "FG",
-            HexCode: "#54326",
-            videoText: "SR sent a video",
-            time: "Yesterday",
-            message: "5"
-        },
-        {
-            _id: 3,
-            image: "https://i.ibb.co/Kwbfs1c/Mask-group-2.png",
-            img_bg: "#08F5CA",
-            name: "Doctor’s Group",
-            member: "1K member",
-            time: "Yesterday"
-        },
-        {
-            _id: 4,
-            image: "https://i.ibb.co/nzPW0zB/user4.png",
-            name: "AR",
-            HexCode: "#54326",
-            Text: "Hey, I am here...",
-            time: "12 Nov, 2023",
-            bg: "#FFFFFF"
-
-        },
-        {
-            _id: 5,
-            image: "https://i.ibb.co/3NfY0ZZ/user2.png",
-            name: "FG",
-            HexCode: "#54326",
-            videoText: "SR sent a video",
-            time: "2 Nov, 2023",
-            message: "5"
-        },
-        {
-            _id: 6,
-            image: "https://i.ibb.co/19FFC1Z/dollar-sign-1.png",
-            img_bg: "#00C12A",
-            name: "Millionaire’s Group",
-            member: "500 member",
-            time: "2 Nov, 2023"
-        },
-        {
-            _id: 7,
-            image: "https://i.ibb.co/cgf3sZ4/user8.png",
-            name: "AR",
-            HexCode: "#54326",
-            videoText: "AR sent a video",
-            time: "2 Nov, 2023",
-            message: "2"
-        },
-        {
-            _id: 8,
-            image: "https://i.ibb.co/427n1gB/user9.png",
-            name: "JK",
-            HexCode: "#54326",
-            Text: "Hey, I am here...",
-            time: "01 Nov, 2023",
-
-        },
-        {
-            _id: 9,
-            image: "https://i.ibb.co/427n1gB/user9.png",
-            name: "FG",
-            HexCode: "#54326",
-            videoText: "SR sent a video",
-            time: "01 Nov, 2023",
-            message: "5"
-        },
-        {
-            _id: 10,
-            image: "https://i.ibb.co/427n1gB/user9.png",
-            name: "PR",
-            HexCode: "#54326",
-            Text: "Hey, I am here...",
-            time: "4 Nov, 2023",
-
-        },
-    ]
     return (
         <div className='sidebar'>
             <UserProfile></UserProfile>

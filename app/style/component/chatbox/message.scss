@@ -1,40 +1,117 @@
-img {
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-    margin-right: 15px;
-    margin-top: 5px;
+.msgHeader {
+    display: flex;
 
-}
-.heading{
-    font-size: 18px;
+    .img {
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        margin-right: 15px;
+        margin-top: 85px;
+        margin-left: $marginTop;
+    }
+
+    .heading {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 15px;
+
+    }
+
+    .svgBox {
+        margin-top: -5px;
+    }
+
+    .msgBox {
+        // margin-top: -250px;
+        // // width: 232px;
+        // height: 73px;
+        // border: 1px solid gray;
+        margin-left: 15px;
+
+        .msg {
+            color: #666;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: -60px;
+
+
+            .msgspan {
+                background: linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+            }
+        }
+
+        .inbox {
+            display: flex;
+            margin-top: -25px;
+            color: var(--Gray, #666);
+            gap: 15px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            .msgTime{
+                text-align: right;
+
+font-size: 12px;
 font-style: normal;
-font-weight: 500;
+font-weight: 400;
 line-height: normal;
-margin-top: 15px;
-}
-.msgBox{
+margin-top: 20px;
+            }
+        }
+    }
+    div{
 
-    .msg{
-        color: var(--Gray, #666);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-      .msg span{
-        background: var(--Gradient2, linear-gradient(87deg, #FD282B 9.48%, #CC176A 73.57%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-      }
+        .message3 {
+            margin-top: -45px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: #666666;
+            margin-left: 15px;
+        }
+        .time{
+            margin-left: 275px;
+            font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: -15px;
+color: #666666;
+        }
     }
-    .inbox {
+
+
+    .TimeButton {
+        margin-top: 20px;
+        margin-left: 230px;
+    }
+    // sender
+    .sender {
         display: flex;
-    }
+        justify-content: space-between;
+        align-self: flex-end; /* Align the container to the right */
+        width: 600px;
+      
+        svg {
+          margin-top: 15px;
+          /* This is not needed for svg */
+        }
+      }
+      
+
 }
