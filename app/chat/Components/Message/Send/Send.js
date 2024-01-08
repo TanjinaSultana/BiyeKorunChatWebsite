@@ -1,6 +1,6 @@
 import React from 'react';
-import gallery from '@/public/image/gallery.svg'
-import Image from 'next/image';
+import gallery from 'public/image/gallery.png'
+
 
 function Send() {
     return (
@@ -15,11 +15,14 @@ function Send() {
 <div className='send'>
     {/* gallery */}
     <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-  <circle cx="25" cy="25" r="25" fill="white"/>
-  <circle cx="25" cy="25" r="24.5" stroke="black" strokeOpacity="0.1"/>
-</svg>
-<Image src={gallery} alt='gallery' className='gallery'/>
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+    <circle cx="25" cy="25" r="25" fill="white"/>
+    <circle cx="25" cy="25" r="24.5" stroke="black" strokeOpacity="0.1"/>
+    <image href={gallery} x="50%" y="50%" width="24" height="24" transform="translate(-12 -12)" />
+  </svg>
+
+
+
     </div>
     {/* link */}
     <div className='link'>

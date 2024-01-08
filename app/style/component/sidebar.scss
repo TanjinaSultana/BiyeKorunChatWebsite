@@ -1,6 +1,6 @@
 // sidebar
     .sidebar {
-        background-color: $bg-color;
+        background-color: $color;
         width: 420px;
         height: 990px;
         margin-top: $marginTop;
@@ -238,5 +238,9 @@
        
     
     }
-   
+    @media (max-width: 768px) {
+        .sidebarResponsive {
+          display: none;
+        }
+    }
 

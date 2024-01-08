@@ -29,10 +29,43 @@
   display: flex;
   gap: 30px;
 }
-.sendOption .send .gallery {
-  margin-top: -150px;
-  margin-left: -40px;
-}
 .sendOption .send .sendIcon {
   margin-left: -10px;
+}
+
+@media (max-width: 768px) {
+  .sendOption {
+    display: flex;
+    gap: 15px;
+    margin-left: 30px;
+  }
+  .sendOption .messageBox {
+    width: 197px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #FFF;
+    display: flex;
+  }
+  .sendOption .messageBox .svg {
+    margin-left: 20px;
+    margin-top: 13px;
+  }
+  .sendOption .messageBox .message {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #6F747C;
+    margin: auto 0;
+    width: 161px;
+  }
+  .sendOption .send {
+    display: flex;
+    gap: 30px;
+  }
+  .sendOption .send .sendIcon {
+    margin-left: -10px;
+  }
 }/*# sourceMappingURL=send.css.map */

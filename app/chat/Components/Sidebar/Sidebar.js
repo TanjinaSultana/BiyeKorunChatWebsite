@@ -1,7 +1,11 @@
+'use client'
+
 import Link from 'next/link';
 import React from 'react';
 import UserProfile from '../UserProfile/UserProfile';
 import UserList from '../UserList/UserList';
+import {  usePathname } from 'next/navigation';
+
 
  export const chats = [
     {
@@ -94,8 +98,10 @@ import UserList from '../UserList/UserList';
     },
 ]
 function Sidebar() {
+   const pathname = usePathname();
+  
     return (
-        <div className='sidebar'>
+        <div className={`${pathname === '/chat'?'sidebar':'sidebar sidebarResponsive'}`}>
             <UserProfile></UserProfile>
             {/* search and filter */}
             <div className='searchFilter'>
