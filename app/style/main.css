@@ -254,18 +254,148 @@
 }
 #chat .chatbox .header .user .user-info {
   display: none;
-  width: 300px;
-  height: 70px;
+  width: 382px;
+  height: 1150px;
   background-color: #F5F5F5;
   position: absolute;
-  top: 40px;
+  top: 10px;
   left: 400px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
 }
-#chat .chatbox .header .user:hover + .chatbox {
-  width: 200px;
+#chat .chatbox .header .user .user-info .chatInfo {
+  display: flex;
+  margin: 33px 30px 0px;
+  justify-content: space-between;
 }
-#chat .chatbox .header .user:hover .user-info {
-  display: block;
+#chat .chatbox .header .user .user-info .chatInfo h3 {
+  margin-top: -2px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  justify-content: flex-start;
+}
+#chat .chatbox .header .user .user-info .chatInfo svg {
+  justify-content: flex-end;
+}
+#chat .chatbox .header .user .user-info .userImage {
+  margin: 15px 30px 0px;
+}
+#chat .chatbox .header .user .user-info .userImage Image {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 321px;
+  height: 250px;
+  flex-shrink: 0;
+}
+#chat .chatbox .header .user .user-info .userImage svg {
+  position: absolute;
+  top: 130px;
+  right: 50px;
+}
+#chat .chatbox .header .user .user-info .userDetails {
+  display: flex;
+  justify-content: space-between;
+  margin: 26px 30px 0px;
+}
+#chat .chatbox .header .user .user-info .userDetails .userName {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  margin-top: -20px;
+}
+#chat .chatbox .header .user .user-info .userDetails .userName h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 8px;
+}
+#chat .chatbox .header .user .user-info .userDetails .userName p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#chat .chatbox .header .user .user-info .userDetails .Online {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+#chat .chatbox .header .user .user-info .userDetails .Online p {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -2px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#chat .chatbox .header .user .user-info .notification {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px 0px;
+}
+#chat .chatbox .header .user .user-info .notification div {
+  justify-content: flex-start;
+  display: flex;
+  gap: 8px;
+}
+#chat .chatbox .header .user .user-info .notification div p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #636363;
+  margin-top: -2px;
+}
+#chat .chatbox .header .user .user-info .notification svg {
+  justify-content: flex-end;
+}
+#chat .chatbox .header .user .user-info hr {
+  width: 321px;
+  height: 1px;
+  color: rgba(0, 0, 0, 0.1019607843);
+}
+#chat .chatbox .header .user .user-info .description {
+  margin: 0px 30px;
+}
+#chat .chatbox .header .user .user-info .description h2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#chat .chatbox .header .user .user-info .description p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #636363;
+}
+#chat .chatbox .header .user .user-info hr {
+  width: 321px;
+  height: 1px;
+  color: rgba(0, 0, 0, 0.1019607843);
+}
+#chat .chatbox .header .user .user-info .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 93px;
+}
+#chat .chatbox .header .user .user-info .gallery h5 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  color: #636363;
+}
+#chat .chatbox .header .user .user-info .gallery h5:hover {
+  text-decoration: underline;
+}
+#chat .chatbox .header .user .user-info.open {
+  transform: translateX(0);
 }
 #chat .chatbox .header .icon {
   display: flex;

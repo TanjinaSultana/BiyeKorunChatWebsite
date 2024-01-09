@@ -4,10 +4,10 @@ import Link from 'next/link';
 import React from 'react';
 import UserProfile from '../UserProfile/UserProfile';
 import UserList from '../UserList/UserList';
-import {  usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 
- export const chats = [
+export const chats = [
     {
         _id: 1,
         image: "https://i.ibb.co/Yk2LzSZ/Mask-group.png",
@@ -98,10 +98,10 @@ import {  usePathname } from 'next/navigation';
     },
 ]
 function Sidebar() {
-   const pathname = usePathname();
-  
+    const pathname = usePathname();
+
     return (
-        <div className={`${pathname === '/chat'?'sidebar':'sidebar sidebarResponsive'}`}>
+        <div className={`${pathname === '/chat' ? 'sidebar' : 'sidebar sidebarResponsive'}`}>
             <UserProfile></UserProfile>
             {/* search and filter */}
             <div className='searchFilter'>

@@ -1,6 +1,6 @@
 #chat{
     display: flex;
-    @import '../component/sidebar.scss';
-    @import '../component/chatbox/chatbox.scss';
+    @import '../component/chat/sidebar.scss';
+    @import '../component/chat/chatbox/chatbox.scss';
     
 }

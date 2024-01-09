@@ -1,0 +1,151 @@
+.user-info {
+    display: none; // Initially hidden
+    width: 382px;
+    height: 1150px;
+    background-color: $color;
+    position: absolute; // Position it absolutely
+    top: 10px; // Adjust the top position as needed
+    left: 400px; // Adjust the left position as needed
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+   
+   .chatInfo{
+    display: flex;
+    margin: 33px 30px 0px;
+    justify-content: space-between;
+    & h3{
+        margin-top: -2px;
+        font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+justify-content: flex-start;
+}
+& svg{
+    justify-content: flex-end;
+}
+
+   }
+   .userImage{
+    margin: 15px 30px 0px;
+    & Image{
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        width: 321px;
+height: 250px;
+flex-shrink: 0;
+}
+& svg{
+    position: absolute; // Position it absolutely
+    top: 130px; // Adjust the top position as needed
+    right: 50px;
+}
+   }
+   .userDetails{
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 30px 0px;
+    
+    .userName{
+        display: flex;
+        gap: 5px;
+ justify-content: flex-start;
+margin-top: -20px;
+ & h3{
+
+     font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 8px;
+ } 
+ & p{
+    color: #00000099;
+    font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ }
+    }
+    .Online{
+        display: flex;
+        gap: 5px;
+        justify-content: flex-end;
+        & p{
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: -2px;
+            color: #00000099;
+        }
+    }
+   }
+   .notification{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px 0px;
+    & div{
+        justify-content: flex-start;
+        display: flex;
+        gap: 8px;
+        & p {
+            font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+color: #636363;
+margin-top: -2px;
+        }
+    }
+    & svg{
+        justify-content: flex-end;
+    }
+   }
+   & hr{
+    width: 321px;
+height: 1px;
+color: #0000001A;
+   }
+   .description{
+    margin: 0px 30px;
+    & h2{
+        font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+    & p{
+        font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+color: #636363;
+    }
+   }
+   & hr{
+    width: 321px;
+height: 1px;
+color: #0000001A;
+   } 
+   .gallery{
+    display: flex;
+    justify-content: center;
+    gap: 93px;
+    & h5{
+        font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; /* 114.286% */
+color: #636363;
+
+    }
+    & h5:hover {
+        text-decoration: underline;
+    }
+   }
+
+}
+.user-info.open {
+    transform: translateX(0);
+  }

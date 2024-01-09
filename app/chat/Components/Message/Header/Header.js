@@ -1,20 +1,25 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import volume from '@/public/image/volume-high.png'
 import search from '@/public/image/search-normal.png';
 import userAdd from '@/public/image/user-add.png';
+import UserInfo from '../UserInfo/UserInfo';
 
 
 
 function Header({ items }) {
-   
-    
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const handleToggleSidebar = () => {
+      setIsSidebarOpen(!isSidebarOpen);
+    };
+
     const { _id, image, name, HexCode } = items;
     return (
         <div className='header'>
-                 {/* userProfile */}
+            {/* userProfile */}
             <div className='user'>
-                <div className='list'>
+                <div className='list' onClick={handleToggleSidebar}>
 
                     <Image src={image} alt='userImage' className='img' width={36} height={36}></Image>
                     <div>
@@ -26,7 +31,7 @@ function Header({ items }) {
                         <p className='online'>Online</p>
                     </div>
                 </div>
-                <div className='user-info'>hello</div>
+             <UserInfo item ={items} isSidebarOpen={isSidebarOpen}></UserInfo>
             </div>
             {/* icons */}
             <div className='icon'>
@@ -57,40 +62,40 @@ function Header({ items }) {
                         <circle cx="19" cy="19" r="2" fill="black" fillOpacity="0.6" />
                         <circle cx="19" cy="26" r="2" fill="black" fillOpacity="0.6" />
                     </svg>
-                   
+
 
                     <div class="dropdown-content">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none" className='arrow'>
-  <path d="M0.749999 14.433C0.416666 14.2406 0.416666 13.7594 0.749999 13.567L23.25 0.576604C23.5833 0.384154 24 0.624717 24 1.00962L24 26.9904C24 27.3753 23.5833 27.6158 23.25 27.4234L0.749999 14.433Z" fill="#F5F5F5"/>
-</svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none" className='arrow'>
+                            <path d="M0.749999 14.433C0.416666 14.2406 0.416666 13.7594 0.749999 13.567L23.25 0.576604C23.5833 0.384154 24 0.624717 24 1.00962L24 26.9904C24 27.3753 23.5833 27.6158 23.25 27.4234L0.749999 14.433Z" fill="#F5F5F5" />
+                        </svg>
                         <div class="dropdown-item">
-<Image src={volume} width={18} height={18}></Image>
-    <a href="#" >Mute Notification</a>
+                            <Image src={volume} width={18} height={18}></Image>
+                            <a href="#" >Mute Notification</a>
                         </div>
                         <div class="dropdown-item">
-<Image src={search} width={18} height={18}></Image>
-    <a href="#" >Search</a>
+                            <Image src={search} width={18} height={18}></Image>
+                            <a href="#" >Search</a>
                         </div>
                         <div class="dropdown-item">
-<Image src={userAdd} width={18} height={18}></Image>
-    <a href="#" >Share my contact</a>
+                            <Image src={userAdd} width={18} height={18}></Image>
+                            <a href="#" >Share my contact</a>
                         </div>
-    <div className='dropdown-item'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-  <path d="M8.19976 1H6.59976C2.59976 1 0.999756 2.6 0.999756 6.6V11.4C0.999756 15.4 2.59976 17 6.59976 17H11.3998C15.3998 17 16.9998 15.4 16.9998 11.4V9.8" stroke="#666666" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-  <path d="M16.9283 2.24818C15.9443 4.70418 13.4723 8.04818 11.4083 9.70418L10.1443 10.7122C9.98432 10.8322 9.82432 10.9282 9.64032 11.0002C9.64032 10.8802 9.63232 10.7602 9.61632 10.6322C9.54432 10.0962 9.30432 9.59218 8.87232 9.16818C8.43232 8.72818 7.90432 8.48018 7.36032 8.40818C7.23232 8.40018 7.10432 8.39218 6.97632 8.40018C7.04832 8.20018 7.15232 8.01618 7.28832 7.86418L8.29632 6.60018C9.95232 4.53618 13.3043 2.04818 15.7523 1.06418C16.1283 0.920176 16.4963 1.03218 16.7283 1.26418C16.9683 1.50418 17.0803 1.87218 16.9283 2.24818Z" stroke="#666666" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-  <path d="M9.64649 10.992C9.64649 11.696 9.37449 12.368 8.87049 12.88C8.47849 13.272 7.95049 13.544 7.31849 13.624L5.74249 13.792C4.88649 13.888 4.15049 13.16 4.24649 12.288L4.41449 10.712C4.56649 9.31199 5.73449 8.41599 6.98249 8.39199C7.11049 8.38399 7.23849 8.39199 7.36649 8.39999C7.91049 8.47199 8.43849 8.71999 8.87849 9.15999C9.31049 9.59199 9.55049 10.088 9.62249 10.624C9.63849 10.752 9.64649 10.88 9.64649 10.992Z" stroke="#666666" stroke-width="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-  <path d="M12.0786 8.98512C12.0786 7.31312 10.7266 5.95312 9.04663 5.95312" stroke="#666666" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-    <a href="#">Clear History</a>
-    </div>
-    <div className='dropdown-item'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M12.2831 7.50044L11.9948 15.0004M8.00476 15.0004L7.71642 7.50044M16.0231 4.82543C16.3081 4.86877 16.5914 4.9146 16.8748 4.96377M16.0231 4.82627L15.1331 16.3946C15.0968 16.8656 14.884 17.3056 14.5373 17.6265C14.1906 17.9474 13.7355 18.1256 13.2631 18.1254H6.73642C6.264 18.1256 5.80894 17.9474 5.46224 17.6265C5.11554 17.3056 4.90275 16.8656 4.86642 16.3946L3.97642 4.82543M16.0231 4.82543C15.0613 4.68003 14.0946 4.56968 13.1248 4.4946M3.12476 4.96293C3.40809 4.91377 3.69142 4.86793 3.97642 4.82543M3.97642 4.82543C4.9382 4.68003 5.90495 4.56968 6.87476 4.4946M13.1248 4.4946V3.73127C13.1248 2.74793 12.3664 1.92793 11.3831 1.8971C10.4611 1.86763 9.53841 1.86763 8.61642 1.8971C7.63309 1.92793 6.87476 2.74877 6.87476 3.73127V4.4946M13.1248 4.4946C11.0445 4.33383 8.95499 4.33383 6.87476 4.4946" stroke="#666666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-    <a href="#" >Delete Chat</a>
-    </div>
-  </div>
+                        <div className='dropdown-item'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M8.19976 1H6.59976C2.59976 1 0.999756 2.6 0.999756 6.6V11.4C0.999756 15.4 2.59976 17 6.59976 17H11.3998C15.3998 17 16.9998 15.4 16.9998 11.4V9.8" stroke="#666666" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M16.9283 2.24818C15.9443 4.70418 13.4723 8.04818 11.4083 9.70418L10.1443 10.7122C9.98432 10.8322 9.82432 10.9282 9.64032 11.0002C9.64032 10.8802 9.63232 10.7602 9.61632 10.6322C9.54432 10.0962 9.30432 9.59218 8.87232 9.16818C8.43232 8.72818 7.90432 8.48018 7.36032 8.40818C7.23232 8.40018 7.10432 8.39218 6.97632 8.40018C7.04832 8.20018 7.15232 8.01618 7.28832 7.86418L8.29632 6.60018C9.95232 4.53618 13.3043 2.04818 15.7523 1.06418C16.1283 0.920176 16.4963 1.03218 16.7283 1.26418C16.9683 1.50418 17.0803 1.87218 16.9283 2.24818Z" stroke="#666666" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M9.64649 10.992C9.64649 11.696 9.37449 12.368 8.87049 12.88C8.47849 13.272 7.95049 13.544 7.31849 13.624L5.74249 13.792C4.88649 13.888 4.15049 13.16 4.24649 12.288L4.41449 10.712C4.56649 9.31199 5.73449 8.41599 6.98249 8.39199C7.11049 8.38399 7.23849 8.39199 7.36649 8.39999C7.91049 8.47199 8.43849 8.71999 8.87849 9.15999C9.31049 9.59199 9.55049 10.088 9.62249 10.624C9.63849 10.752 9.64649 10.88 9.64649 10.992Z" stroke="#666666" stroke-width="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12.0786 8.98512C12.0786 7.31312 10.7266 5.95312 9.04663 5.95312" stroke="#666666" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                            <a href="#">Clear History</a>
+                        </div>
+                        <div className='dropdown-item'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M12.2831 7.50044L11.9948 15.0004M8.00476 15.0004L7.71642 7.50044M16.0231 4.82543C16.3081 4.86877 16.5914 4.9146 16.8748 4.96377M16.0231 4.82627L15.1331 16.3946C15.0968 16.8656 14.884 17.3056 14.5373 17.6265C14.1906 17.9474 13.7355 18.1256 13.2631 18.1254H6.73642C6.264 18.1256 5.80894 17.9474 5.46224 17.6265C5.11554 17.3056 4.90275 16.8656 4.86642 16.3946L3.97642 4.82543M16.0231 4.82543C15.0613 4.68003 14.0946 4.56968 13.1248 4.4946M3.12476 4.96293C3.40809 4.91377 3.69142 4.86793 3.97642 4.82543M3.97642 4.82543C4.9382 4.68003 5.90495 4.56968 6.87476 4.4946M13.1248 4.4946V3.73127C13.1248 2.74793 12.3664 1.92793 11.3831 1.8971C10.4611 1.86763 9.53841 1.86763 8.61642 1.8971C7.63309 1.92793 6.87476 2.74877 6.87476 3.73127V4.4946M13.1248 4.4946C11.0445 4.33383 8.95499 4.33383 6.87476 4.4946" stroke="#666666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <a href="#" >Delete Chat</a>
+                        </div>
+                    </div>
                 </div>
 
 

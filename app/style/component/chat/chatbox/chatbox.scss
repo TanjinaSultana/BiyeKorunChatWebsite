@@ -64,25 +64,9 @@
                 }
             }
 
-            .user-info {
-                display: none; // Initially hidden
-                width: 300px;
-                height: 70px;
-                background-color: $color;
-                position: absolute; // Position it absolutely
-                top: 40px; // Adjust the top position as needed
-                left: 400px; // Adjust the left position as needed
-            }
+          @import '../chatInfo/chatInfo.scss';
 
-            &:hover {
-                + .chatbox {
-                    width: 200px;
-                }
-
-                .user-info {
-                    display: block;
-                }
-            }
+         
           
         }
 
